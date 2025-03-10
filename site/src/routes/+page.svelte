@@ -1,78 +1,84 @@
+<!-- <div id="navbar">
+    <button>Home</button>
+    <button>About</button>
+    <!-- turning ideas into reality with tech -->
+    <!-- into gritty hard-scifi games -->
+    <!-- <button>Projects</button>
+    <button>Hobbies</button>
+    <button>Contact</button>
+</div> -->
 
-<div class="card">
-    <p>Hey, I'm</p>
-    <div id="display">
-        <h1 id="jeremymaxxing">JEREMY JANELLA</h1>
-    </div>
-    <p>Computer nerd, gamer, mountain biker, adventurer</p>
+<svelte:head>
+    <title>Jeremy Janella | Computer Scientist</title>
+</svelte:head>
+
+<div id="name-card" class="align-right card">
+    <p id="HeyIm">Hey! My name is</p>
+    <span use:animateTyping={["Jeremy Janella"]} id="jeremymaxxing"></span>
+    <p>An experienced full stack developer, cybersecurity enthusiest, and computer science student at the University of Toronto active in CTFs, hackathons, programming competitions, and indie developer of the soon-to-be-released game Subterworks</p>
+    <p>This site is still being ported!</p>
+    <!-- <p>Computer nerd, gamer, mountain biker, adventurer, hard sci-fi enjoyer, ethics enjoyer, swimmer, jumper</p> -->
 </div>
 
 <!-- <p>Computer Science Student, Interested in Cyber Security, Networiking, Open source, and always learning something new</p>-->
 
 <!-- Game dev, servers experiements, cyberpatriot, linux, ai serversresume-->
 
-<style>
-    * {
-        color: rgb(212 212 216);
-        background-color: #222;
-        font-family: sans-serif;
-    }
-    button {
-        border-width: 0px;
-        margin: 0px;
-        padding: 16px;
-        font-size: 1em;
-    }
+<script lang="ts">
+    export function animateTyping(node: HTMLElement, texts: string[]) {
+	let textsToType = texts;
 
-    #navbar {
-        margin: 4px;
-        border-radius: 12px;
-    }
+	let textsIndex = 0;
+	let charIndex = 0;
+	let currentText = '';
 
-    #display {
-        display: inline-block;
-    }
+	const updateInnerHTML = () => {
+		// Always include the zero-width space and conditionally add the text and cursor
+		node.innerHTML = '&#8203;' + currentText;
+	};
 
-    .card {
-        margin: 8px;
-        padding: 8px;
-        border-radius: 12px;
-    }
+	const waitMsec = (delay: number) => {
+		setTimeout(() => { updateInnerHTML();}, delay);
+	};
 
-    #jeremymaxxing {
-        font-weight: 800;
-        font-size: clamp(2.5rem,7vw,4rem);
-        line-height: 1.25;
-        margin: 0px;
-        text-shadow: 2px 1px orangered, -2px -1px cornflowerblue;
-    }
+	// Typing animation effect
+	const typeEffect = () => {
+		const currentString = textsToType[textsIndex];
+		const delay = currentString[charIndex] === ' ' ? 25 : 30;
 
-    /* https://css-tricks.com/snippets/css/typewriter-effect/ */
-    h1 {
-        font-family: monospace;
-        padding: 8px;
-        display: inline-block;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .1em solid orangered; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        /* margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        padding: 0px;
-        animation: 
-        typing 0.5s steps(16),
-        blink 0.5s step-end infinite;
-    }
+		if (charIndex < currentString.length) {
+			currentText += currentString[charIndex++];
+			setTimeout(typeEffect, delay);
+		} else {
+			waitMsec(3000);
+			setTimeout(deleteEffect, 6000); // Wait before starting to delete
+		}
 
+		updateInnerHTML();
+	};
 
-    /* The typing effect */
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
+	// Deleting animation effect
+	const deleteEffect = () => {
+		if (charIndex > 0) {
+			currentText = currentText.slice(0, --charIndex);
+			setTimeout(deleteEffect, 20);
+		} else {
+			textsIndex = (textsIndex + 1) % textsToType.length;
+			currentText = ''; // Clear text but keep zero-width space
+			setTimeout(typeEffect, 1250);
+		}
 
-    /* The typewriter cursor effect */
-    @keyframes blink {
-        from, to { border-color: transparent }
-        50% { border-color: orangered; }
-    }
+		updateInnerHTML();
+	};
 
-</style>
+	// Start typing effect
+	setTimeout(typeEffect, 250);
+
+	return {
+		onDestroy() {},
+		update(newTexts: string[]) {
+			textsToType = newTexts;
+		}
+	};
+}
+</script>

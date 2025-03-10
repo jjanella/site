@@ -1,0 +1,93 @@
+#name-card {
+    background-color: #222;
+}
+
+#projects-card {
+    background-color: maroon;
+}
+
+#hobbies-card {
+    background-color: #FFCE00;
+}
+
+button {
+    border-radius: 0px;
+    background-color: #222;
+    border-width: 0;
+    padding: 20px;;
+}
+
+.card {
+    margin-top: 2rem;
+    min-width: 55vmax;
+    max-width: 70vmax;
+    width: min-content;
+    margin-bottom: 2rem;
+    padding: 12px;
+}
+.align-right {
+    float: right;
+    border-left: 0.8rem solid orangered;
+}
+.align-left {
+    margin-right: 25%;
+}
+
+#HeyIm {
+    padding-left: 5ch;
+    font-weight: 600;
+    margin: 10px;
+    margin-bottom: 15px;
+}
+body {
+    background-color: #000;
+    margin: 0px;
+}
+
+* {
+    color: rgb(212 212 216);
+    font-family: sans-serif;
+}
+
+#jeremymaxxing {
+    font-weight: 1000;
+    font-size: 5rem;
+    line-height: 1;
+    margin: 20px;
+    text-shadow: 2px 2px orangered, -2px -2px cornflowerblue;
+    letter-spacing: 2px;
+    width: fit-content;
+    border-right: 0.4rem solid orangered;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 4rem;
+ 
+}
+
+/* https://css-tricks.com/snippets/css/typewriter-effect/ */
+.typed {
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid orangered; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    /* margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    
+    animation: 
+    typing 0.5s steps(16);
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 110% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink {
+    from, to { border-color: orangered}
+    50% { border-color: transparent; }
+}
+
