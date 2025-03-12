@@ -15,7 +15,7 @@
 <div id="name-card" class="align-right card">
     <p id="HeyIm">Hey! My name is</p>
     <span use:animateTyping={["Jeremy Janella"]} id="jeremymaxxing"></span>
-    <p>An experienced full stack developer, cybersecurity enthusiest, and computer science student at the University of Toronto active in CTFs, hackathons, programming competitions, and indie developer of the soon-to-be-released game Subterworks</p>
+    <p>An experienced full stack developer, cybersecurity enthusiast, and computer science student at the University of Toronto active in CTFs, hackathons, programming competitions, and indie developer of the soon-to-be-released game Subterworks</p>
     <p>This site is still being ported!</p>
     <!-- <p>Computer nerd, gamer, mountain biker, adventurer, hard sci-fi enjoyer, ethics enjoyer, swimmer, jumper</p> -->
 </div>
