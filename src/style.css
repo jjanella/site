@@ -1,7 +1,3 @@
-#name-card {
-    background-color: #222;
-}
-
 #projects-card {
     background-color: maroon;
 }
@@ -19,18 +15,26 @@ button {
 
 .card {
     margin-top: 2rem;
-    min-width: 55vw;
-    max-width: 70vw;
+    min-width: 65vw;
+    max-width: 75vw;
     width: min-content;
     margin-bottom: 2rem;
     padding: 12px;
+    background-color: #222;
 }
 .align-right {
     float: right;
     border-left: 0.8rem solid orangered;
+    padding-right: 20px;
 }
 .align-left {
-    margin-right: 25%;
+    float: left;
+    border-right: 0.8rem solid orangered;
+    padding-left: 20px;
+}
+
+.indent {
+    text-indent: 6mm;
 }
 
 #HeyIm {
@@ -39,6 +43,7 @@ button {
     margin: 10px;
     margin-bottom: 15px;
 }
+
 body {
     background-color: #000;
     margin: 0px;
@@ -54,6 +59,7 @@ body {
     font-size: 5rem;
     line-height: 1;
     margin: 20px;
+    padding: 0px;
     text-shadow: 2px 2px orangered, -2px -2px cornflowerblue;
     letter-spacing: 2px;
     width: fit-content;
