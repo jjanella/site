@@ -19,8 +19,8 @@ button {
 
 .card {
     margin-top: 2rem;
-    min-width: 55vmax;
-    max-width: 70vmax;
+    min-width: 55vw;
+    max-width: 70vw;
     width: min-content;
     margin-bottom: 2rem;
     padding: 12px;
