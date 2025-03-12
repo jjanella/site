@@ -33,7 +33,6 @@ declare module '$env/static/private' {
 	export const COLORTERM: string;
 	export const XDG_CONFIG_DIRS: string;
 	export const npm_config_cache: string;
-	export const XDG_SESSION_PATH: string;
 	export const XDG_MENU_PREFIX: string;
 	export const TERM_PROGRAM_VERSION: string;
 	export const ICEAUTHORITY: string;
@@ -60,8 +59,10 @@ declare module '$env/static/private' {
 	export const XAUTHORITY: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const MOTD_SHOWN: string;
+	export const GDM_LANG: string;
 	export const GTK2_RC_FILES: string;
 	export const HOME: string;
+	export const USERNAME: string;
 	export const LANG: string;
 	export const LC_PAPER: string;
 	export const XDG_CURRENT_DESKTOP: string;
@@ -69,7 +70,6 @@ declare module '$env/static/private' {
 	export const MEMORY_PRESSURE_WATCH: string;
 	export const WAYLAND_DISPLAY: string;
 	export const GIT_ASKPASS: string;
-	export const XDG_SEAT_PATH: string;
 	export const INVOCATION_ID: string;
 	export const MANAGERPID: string;
 	export const INIT_CWD: string;
@@ -78,6 +78,7 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_script: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const XKB_DEFAULT_LAYOUT: string;
+	export const XDG_ACTIVATION_TOKEN: string;
 	export const npm_config_npm_version: string;
 	export const XDG_SESSION_CLASS: string;
 	export const LC_IDENTIFICATION: string;
@@ -88,7 +89,6 @@ declare module '$env/static/private' {
 	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const QT_WAYLAND_RECONNECT: string;
 	export const KDE_SESSION_VERSION: string;
-	export const PAM_KWALLET5_LOGIN: string;
 	export const DISPLAY: string;
 	export const npm_lifecycle_event: string;
 	export const GSK_RENDERER: string;
@@ -98,10 +98,8 @@ declare module '$env/static/private' {
 	export const XDG_VTNR: string;
 	export const XDG_SESSION_ID: string;
 	export const npm_config_user_agent: string;
-	export const ROCM_PATH: string;
 	export const npm_execpath: string;
 	export const XDG_RUNTIME_DIR: string;
-	export const MKLROOT: string;
 	export const DEBUGINFOD_URLS: string;
 	export const npm_package_json: string;
 	export const LC_TIME: string;
@@ -115,6 +113,7 @@ declare module '$env/static/private' {
 	export const BROWSER: string;
 	export const PATH: string;
 	export const npm_config_node_gyp: string;
+	export const GDMSESSION: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const npm_config_global_prefix: string;
@@ -163,7 +162,6 @@ declare module '$env/dynamic/private' {
 		COLORTERM: string;
 		XDG_CONFIG_DIRS: string;
 		npm_config_cache: string;
-		XDG_SESSION_PATH: string;
 		XDG_MENU_PREFIX: string;
 		TERM_PROGRAM_VERSION: string;
 		ICEAUTHORITY: string;
@@ -190,8 +188,10 @@ declare module '$env/dynamic/private' {
 		XAUTHORITY: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		MOTD_SHOWN: string;
+		GDM_LANG: string;
 		GTK2_RC_FILES: string;
 		HOME: string;
+		USERNAME: string;
 		LANG: string;
 		LC_PAPER: string;
 		XDG_CURRENT_DESKTOP: string;
@@ -199,7 +199,6 @@ declare module '$env/dynamic/private' {
 		MEMORY_PRESSURE_WATCH: string;
 		WAYLAND_DISPLAY: string;
 		GIT_ASKPASS: string;
-		XDG_SEAT_PATH: string;
 		INVOCATION_ID: string;
 		MANAGERPID: string;
 		INIT_CWD: string;
@@ -208,6 +207,7 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_script: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		XKB_DEFAULT_LAYOUT: string;
+		XDG_ACTIVATION_TOKEN: string;
 		npm_config_npm_version: string;
 		XDG_SESSION_CLASS: string;
 		LC_IDENTIFICATION: string;
@@ -218,7 +218,6 @@ declare module '$env/dynamic/private' {
 		VSCODE_GIT_IPC_HANDLE: string;
 		QT_WAYLAND_RECONNECT: string;
 		KDE_SESSION_VERSION: string;
-		PAM_KWALLET5_LOGIN: string;
 		DISPLAY: string;
 		npm_lifecycle_event: string;
 		GSK_RENDERER: string;
@@ -228,10 +227,8 @@ declare module '$env/dynamic/private' {
 		XDG_VTNR: string;
 		XDG_SESSION_ID: string;
 		npm_config_user_agent: string;
-		ROCM_PATH: string;
 		npm_execpath: string;
 		XDG_RUNTIME_DIR: string;
-		MKLROOT: string;
 		DEBUGINFOD_URLS: string;
 		npm_package_json: string;
 		LC_TIME: string;
@@ -245,6 +242,7 @@ declare module '$env/dynamic/private' {
 		BROWSER: string;
 		PATH: string;
 		npm_config_node_gyp: string;
+		GDMSESSION: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		npm_config_global_prefix: string;
