@@ -44,7 +44,33 @@
 	</ul>
 </div>
 
-<div class="align-left card">
+<div id="UAV" class = "align-left card">
+	<div style="float: right; padding: 20px;">
+		<img src="/src/lib/drone/graphing.jpg" style="width: 10vw;" alt="Testing Input Response"/>
+		<p align="center">
+			Testing Input Response
+		</p>
+		<img src="/src/lib/drone/top.jpg" style="width: 10vw;" alt="Internal View"/>
+		<p align="center">
+			Internal View
+		</p>
+	</div>
+	<h1>Designed and Built a UAV</h1>
+	<p>
+		I chose to build a drone from scratch for my AP Physics final project. We were given an open ended assignment to <i>build something cool</i> and I wanted a drone. My choice was much more ambitious than the course required, and took quite a while to complete.<br/><br/>
+		
+		For the drones frame I finally had an excuse to purchase a 3d printer. I modelled the frame and arms modularly to support future upgrades and replacements from damage, reducing the cost of operation. Initially I was using some 3d printed torodial propellers due to their higher efficiency and lower sounds usage. Due to safety concerns of the propellers not withstanding tension at higher RPMs and exploding I switched to arcylic propellers. A challenge in designing the frame was leaving enough room to contain the volume of the wires. I went with the Elegoo Neptune 3 as the printer was open-source and had a much better cost-to-utility than proprietary printers such as the Ender series. I am not sponsored I just really like the printer.<br/><br/>
+	</p>
+	<p>
+		The flight computer was the most difficult part to program. Using an ultrasonic distance sensor, gyroscope, and accelerometer the drone has enough information to probably never crash. The autopilot is implemented on an Arduino UNO using a <a href="https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller">PID controller</a> for stabolization. The autopilot quality is currently impacted every time the drones mass distribution changes, which can be fixed with a reinforcement machine learning algorithm. For the higher level programming such as flight automation, video transmission and WiFi communications I used a Raspberry Pi Pico. There is also a 2.4GHz line of sight receiver for manual control. A future upgrade may contain a SIM card for near-infinite remote control connection, but drone regulations would make this difficult.<br/><br/>
+
+		The power system is the most physically challenging portion of the drone. The motors took 14.6 Volts, while the UNO microcontroller took 5 Volts, and the Pico and most sensors run at 3.3 Volts. All of the power to the motors ran through the power distribution board, which I modified to also output the lower voltages and used Bidirectional Logic Level Converters to shift between 3.3 and 5V signals where needed. A potentional flaw with having all the power coming from the same source is spikes in energy consumption to the motors may cause the microcomputers to receive too little power, which could be fixed with a capacitor. Luckily, I havn't experienced this yet as the 2C discharge rate on the 2.5Ah capacity battery is more than enough. Having a battery this big does mean it takes up about half the internal electronics volume and is half of the drones mass, but it can also maintain full throttle for half an hour making for long flights.<br/><br/>
+
+		The motors I used were a bit overkill for a 1.1kg drone, as going past 20% throttle sends it shooting through the sky -- which is not a bad issue to have. Here's the technical numbers behind that: I have propellers with a 6cm radius on motors with a 2450KV rating (2450 rpm per volt) at peaking at 14.6 Volts. From this the tip speed is computer to be 225m/s under no load at max throttle, quite a lot more than what is safe or nessecary to get into the air.
+	</p>
+</div>
+
+<div class="align-right card">
 	<h1>Work Experience</h1>
 	<ul>
 		<li>
@@ -55,12 +81,12 @@
 				 <li>Design schedules based on many parameters include age, level, class size, siblings in adjacent classes, given availibility, and more soft requirements</li>
 				 <li>Send swimming lesson application confirmations</li>
 			</ol>
-			<p>Implementing the reception and confirmation of lessons was striaghtforward enough with a Flask site using Stripe for payments, and Firebase service for sending confirmation emails. The difficult part was building the schedule, which is a form of the <a href="https://en.wikipedia.org/wiki/Nurse_scheduling_problem" >Nurse Scheduling Problem</a>. As there were at max a few hundred students per schedule, I solved this using a recursive algorithm and scoring system to choose the best generated option.</p>
+			<p>Implementing the reception and confirmation of lessons was striaghtforward enough with a Flask site using Stripe for payments, and Firebase service for sending confirmation emails. The difficult part was building the schedule, which is a form of the <a href="https://en.wikipedia.org/wiki/Nurse_scheduling_problem">NP-Hard Nurse Scheduling Problem</a>. As there were at max a few hundred students per schedule, I solved this using a recursive algorithm and scoring system to choose the best generated option.</p>
 		</li>
 	</ul>
 </div>
 
-<div class="align-right card">
+<div class="align-left card">
 	<h1>Volunteering</h1>
 	<p>I volunteer within the Computer Science, Mathematics, and Statistics department at the University of Toronto as a Computer Science Ambassador to help cultivate interest in the Mathematical Sciences in high school students, as well as providing direction for first year students within the programs.</p>
 </div>
