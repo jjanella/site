@@ -33,7 +33,7 @@
 	</p>
 
 	<div align="center">
-		<img src="/src/lib/game/flying.webp" style="width: 600px" alt="Flying Vehicle"/>
+		<img src="/src/lib/game/flying.webp" style="width: 100%; max-width: 600px" alt="Flying Vehicle"/>
 		<p align="center">
 			A grid flying through caves
 		</p>
