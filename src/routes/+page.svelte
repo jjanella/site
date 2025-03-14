@@ -22,10 +22,10 @@
 
 <div id="Game" class="align-left card">
 	<h1>Subterstrike Game Development</h1>
-	<div style="float: right; padding: 20px; width: 6vw;">
+	<div style="float: right; padding: 20px; width: 10vw;">
 		<img src="/src/lib/game/chunkfunc.webp" style="width: max-content;" alt="Zoomed out chunk generation"/>
 		<p align="center">
-			Prototype terrain sample zoomed far out
+			Prototype terrain sample
 		</p>
 	</div>
 	<p class="indent">
@@ -33,9 +33,9 @@
 	</p>
 
 	<div align="center">
-		<img src="/src/lib/game/flying.webp" style="width: max-content;" alt="Flying Vehicle"/>
-		<p>
-			A grid flying through caves, preceding graphics
+		<img src="/src/lib/game/flying.webp" style="width: 600px" alt="Flying Vehicle"/>
+		<p align="center">
+			A grid flying through caves
 		</p>
 	</div>
 </div>
