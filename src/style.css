@@ -21,16 +21,16 @@ button {
     margin-bottom: 2rem;
     padding: 12px;
     background-color: #222;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 .align-right {
     float: right;
     border-left: 0.8rem solid orangered;
-    padding-right: 20px;
 }
 .align-left {
     float: left;
     border-right: 0.8rem solid orangered;
-    padding-left: 20px;
 }
 
 .indent {
@@ -45,7 +45,7 @@ button {
 }
 
 body {
-    background-color: #000;
+    background-image: linear-gradient(180deg, #111, #333, #111);
     margin: 0px;
 }
 
