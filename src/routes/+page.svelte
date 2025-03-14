@@ -31,7 +31,7 @@
 	<ul>
 		<li>
 			<h3>NGINX Reverse Proxy</h3>
-			<p>This server is the internets access to all of my other servers, and the glue holding them together. Using IPTables traffic is forwarded from specified ports onto private servers connected to it.</p>
+			<p>This server is the internets access to all of my other servers, and the glue holding them together. I was using IPTables breifly but have moved to NGINX to forward traffic from specified ports onto private servers connected to it.</p>
 		</li>
 		<li>
 			<h3>Lightweight Server</h3>
