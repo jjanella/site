@@ -34,7 +34,7 @@
 
 	<div align="center">
 		<img src="/src/lib/game/flying.webp" style="width: 100%; max-width: 600px" alt="Flying Vehicle"/>
-		<p align="center">
+		<p>
 			A grid flying through caves
 		</p>
 	</div>
@@ -45,16 +45,22 @@
 	<p>Open source and networking hobbies led me to depoly a set of interconnected Linux servers:</p>
 	<ul>
 		<li>
-			<h3>NGINX Reverse Proxy</h3>
-			<p>This server is the internets access to all of my other servers, and the glue holding them together. I was using IPTables briefly but have moved to NGINX to forward traffic from specified ports onto private servers connected to it.</p>
+			<h3>NGINX Reverse Proxy and VPN Server</h3>
+			<p>
+				This server is the internets access to all of my other servers, and the glue holding them together. I was using IPTables briefly but have moved to NGINX to forward traffic from specified ports onto private servers connected to it. This device doubles as a <a href="https://www.wireguard.com/">Wireguard VPN</a> server which in the past connected servers on the same virtual network, however I have switched to reverse ssh tunnels to connect other servers to this one. The VPN is still useful for odd networking tasks and troubleshooting.
+			</p>
 		</li>
 		<li>
 			<h3>Lightweight Server</h3>
-			<p>Running on  Raspberry Pi, this servers main job is to run Subterstrike servers, Minecraft servers, other game servers, and this website you're looking at.</p>
+			<p>
+				Running on  Raspberry Pi, this servers main job is to run Subterstrike servers, Minecraft servers, other game servers, and this website you're looking at.
+			</p>
 		</li>
 		<li>
-			<h3>AI Server</h3>
-			<p>A powerful computer with an RX 6950 XT GPU runs my local AI servers such as Stable Diffusion image generation, Ollama and Open-WebUI LLMs. As this is also my primary devices it contains a file server.</p>
+			<h3>AI & FTP Server</h3>
+			<p>
+				A powerful computer with an RX 6950 XT GPU runs my local generative AI servers including <a href="https://invoke-ai.github.io/InvokeAI/">Invoke AI</a> for Image Generation, <a href="https://ollama.com/?ref=useaiforit">Ollama</a> and <a href="https://docs.openwebui.com/">Open-WebUI</a> for LLM services. As this is also my primary device with a few spare terabytes of NVMe storage it contains a <a href="https://en.wikipedia.org/wiki/Vsftpd">Vsftpd file server</a>. By the way, this server runs on <a href="https://archlinux.org/"><i>Arch Linux</i></a> :)
+			</p> 
 		</li>
 	</ul>
 </div>
@@ -63,7 +69,7 @@
 	<div style="float: right; padding: 20px; width: 10vw;">
 		<img src="/src/lib/drone/graphing.jpg" style="width: 10vw;" alt="Testing Input Response"/>
 		<p align="center">
-			Testing Input<br/>Response
+			Testing Input Response
 		</p>
 		<img src="/src/lib/drone/top.jpg" style="width: 10vw;" alt="Internal View"/>
 		<p align="center">
@@ -75,13 +81,12 @@
 		I chose to build a drone from scratch for my AP Physics final project. We were given an open ended assignment to <i>build something cool</i> and I wanted a drone. My choice was much more ambitious than the course required, and took quite a while to complete.<br/><br/>
 		
 		For the drones frame I finally had an excuse to purchase a 3d printer. I modelled the frame and arms modularly to support future upgrades and replacements from damage, reducing the cost of operation. Initially I was using some 3d printed torodial propellers due to their higher efficiency and lower sounds usage. Due to safety concerns of the propellers not withstanding tension at higher RPMs and exploding I switched to some generic acrylic propellers I bought. A challenge in designing the frame was leaving enough room to contain the volume of the wires. I went with the Elegoo Neptune 3 as the printer was open-source and had a much better cost-to-utility than proprietary printers such as the Ender series. I am not sponsored I just really like the printer.<br/><br/>
-	</p>
-	<p>
+
 		The flight computer was the most difficult part to program. Using an ultrasonic distance sensor, gyroscope, and accelerometer the drone has enough information to probably never crash. The autopilot is implemented on an Arduino UNO using a <a href="https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller">PID controller</a> for stabolization. The autopilot quality is currently impacted every time the drones mass distribution changes, which can be fixed with a reinforcement machine learning algorithm. For the higher level programming such as flight automation, video transmission and WiFi communications I used a Raspberry Pi Pico. There is also a 2.4GHz line of sight receiver for manual control. A future upgrade may contain a SIM card for near-infinite remote control connection, but drone regulations would make this difficult.<br/><br/>
 
 		The power system is the most physically challenging portion of the drone. The motors took 14.6 Volts, while the UNO microcontroller took 5 Volts, and the Pico and most sensors run at 3.3 Volts. All of the power to the motors ran through the power distribution board, which I modified to also output the lower voltages and used Bidirectional Logic Level Converters to shift between 3.3 and 5V signals where needed. A potential flaw with having all the power coming from the same source is spikes in energy consumption to the motors may cause the microcomputers to receive too little power, which could be fixed with a capacitor. Luckily, I haven't experienced this yet as the 2C discharge rate on the 2.5Ah capacity battery is more than enough. Having a battery this big does mean it takes up about half the internal electronics volume and is half of the drones mass, but it can also maintain full throttle for half an hour making for long flights.<br/><br/>
 
-		The motors I used were a bit overkill for a 1.1kg drone, as going past 20% throttle sends it shooting through the sky -- which is not a bad issue to have. Here's the technical numbers behind that: I have propellers with a 6cm radius on motors with a 2450KV rating (2450 rpm per volt) at peaking at 14.6 Volts. From this the tip speed is computer to be 225m/s under no load at max throttle, quite a lot more than what is safe or necessary to get into the air.
+		The motors I used were a bit overkill for a 1.1kg drone, as going past 20% throttle sends it shooting through the sky -- which is not a bad issue to have. Here's the technical numbers behind that: I have propellers with a 6cm radius on motors with a 2450KV rating (2450 rpm per volt) at peaking at 14.6 Volts. From this the tip speed is computed to be ~225m/s under no load at max throttle, quite a lot more than what is safe or necessary to get into the air.
 	</p>
 </div>
 
@@ -96,14 +101,19 @@
 				 <li>Design schedules based on many parameters include age, level, class size, siblings in adjacent classes, given availability, and more soft requirements</li>
 				 <li>Send swimming lesson application confirmations</li>
 			</ol>
-			<p>Implementing the reception and confirmation of lessons was straightforward enough with a Flask site using Stripe for payments, and Firebase service for sending confirmation emails. The difficult part was building the schedule, which is a form of the <a href="https://en.wikipedia.org/wiki/Nurse_scheduling_problem">NP-Hard Nurse Scheduling Problem</a>. As there were at max a few hundred students per schedule, I solved this using a recursive algorithm and scoring system to choose the best generated option.</p>
+			<p>
+				Implementing the reception and confirmation of lessons was straightforward enough with a Flask site using Stripe for payments, and Firebase service for sending confirmation emails. The difficult part was building the schedule, which is a form of the <a href="https://en.wikipedia.org/wiki/Nurse_scheduling_problem">NP-Hard Nurse Scheduling Problem</a>. As there were at max a few hundred students per schedule, I solved this using a recursive algorithm and scoring system to choose the best generated option.
+			</p>
 		</li>
 	</ul>
 </div>
 
 <div class="align-left card">
 	<h1>Volunteering</h1>
-	<p>I volunteer within the Computer Science, Mathematics, and Statistics department at the University of Toronto as a Computer Science Ambassador to help cultivate interest in the Mathematical Sciences in high school students, as well as providing direction for first year students within the programs.</p>
+	<p>
+		I volunteer within the Computer Science, Mathematics, and Statistics department at the University of Toronto as a Computer Science Ambassador to help cultivate interest in the Mathematical Sciences in high school students, as well as providing direction for first year students within the programs.
+
+	</p>
 </div>
 
 <!-- <p>Computer Science Student, Interested in Cyber Security, Networiking, Open source, and always learning something new</p>-->

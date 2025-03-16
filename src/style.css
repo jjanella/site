@@ -19,7 +19,7 @@ button {
     max-width: 90vw;
     width: min-content;
     padding: 12px;
-    background-image: linear-gradient(45deg, #101010, #202020);
+    background-image: linear-gradient(315deg, #101010, #202020);
     padding-right: 40px;
     padding-left: 40px;
     border-image: linear-gradient(to bottom, orangered, maroon) 1 100%;
