@@ -29,7 +29,9 @@ declare module '$env/static/private' {
 	export const SHELL: string;
 	export const npm_command: string;
 	export const SESSION_MANAGER: string;
+	export const WINDOWID: string;
 	export const npm_config_userconfig: string;
+	export const QT_SCREEN_SCALE_FACTORS: string;
 	export const COLORTERM: string;
 	export const XDG_CONFIG_DIRS: string;
 	export const npm_config_cache: string;
@@ -49,6 +51,7 @@ declare module '$env/static/private' {
 	export const NO_AT_BRIDGE: string;
 	export const npm_config_globalconfig: string;
 	export const EDITOR: string;
+	export const GTK_MODULES: string;
 	export const XDG_SEAT: string;
 	export const PWD: string;
 	export const LOGNAME: string;
@@ -67,7 +70,6 @@ declare module '$env/static/private' {
 	export const XDG_CURRENT_DESKTOP: string;
 	export const npm_package_version: string;
 	export const MEMORY_PRESSURE_WATCH: string;
-	export const WAYLAND_DISPLAY: string;
 	export const GIT_ASKPASS: string;
 	export const XDG_SEAT_PATH: string;
 	export const INVOCATION_ID: string;
@@ -75,9 +77,9 @@ declare module '$env/static/private' {
 	export const INIT_CWD: string;
 	export const CHROME_DESKTOP: string;
 	export const KDE_SESSION_UID: string;
+	export const ALACRITTY_SOCKET: string;
 	export const npm_lifecycle_script: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
-	export const XKB_DEFAULT_LAYOUT: string;
 	export const npm_config_npm_version: string;
 	export const XDG_SESSION_CLASS: string;
 	export const LC_IDENTIFICATION: string;
@@ -106,7 +108,6 @@ declare module '$env/static/private' {
 	export const npm_package_json: string;
 	export const LC_TIME: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
-	export const QT_AUTO_SCREEN_SCALE_FACTOR: string;
 	export const JOURNAL_STREAM: string;
 	export const XDG_DATA_DIRS: string;
 	export const KDE_FULL_SESSION: string;
@@ -115,11 +116,13 @@ declare module '$env/static/private' {
 	export const BROWSER: string;
 	export const PATH: string;
 	export const npm_config_node_gyp: string;
+	export const ALACRITTY_LOG: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const npm_config_global_prefix: string;
 	export const KDE_APPLICATIONS_AS_SCOPE: string;
 	export const MAIL: string;
+	export const ALACRITTY_WINDOW_ID: string;
 	export const npm_node_execpath: string;
 	export const npm_config_engine_strict: string;
 	export const LC_NUMERIC: string;
@@ -159,7 +162,9 @@ declare module '$env/dynamic/private' {
 		SHELL: string;
 		npm_command: string;
 		SESSION_MANAGER: string;
+		WINDOWID: string;
 		npm_config_userconfig: string;
+		QT_SCREEN_SCALE_FACTORS: string;
 		COLORTERM: string;
 		XDG_CONFIG_DIRS: string;
 		npm_config_cache: string;
@@ -179,6 +184,7 @@ declare module '$env/dynamic/private' {
 		NO_AT_BRIDGE: string;
 		npm_config_globalconfig: string;
 		EDITOR: string;
+		GTK_MODULES: string;
 		XDG_SEAT: string;
 		PWD: string;
 		LOGNAME: string;
@@ -197,7 +203,6 @@ declare module '$env/dynamic/private' {
 		XDG_CURRENT_DESKTOP: string;
 		npm_package_version: string;
 		MEMORY_PRESSURE_WATCH: string;
-		WAYLAND_DISPLAY: string;
 		GIT_ASKPASS: string;
 		XDG_SEAT_PATH: string;
 		INVOCATION_ID: string;
@@ -205,9 +210,9 @@ declare module '$env/dynamic/private' {
 		INIT_CWD: string;
 		CHROME_DESKTOP: string;
 		KDE_SESSION_UID: string;
+		ALACRITTY_SOCKET: string;
 		npm_lifecycle_script: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
-		XKB_DEFAULT_LAYOUT: string;
 		npm_config_npm_version: string;
 		XDG_SESSION_CLASS: string;
 		LC_IDENTIFICATION: string;
@@ -236,7 +241,6 @@ declare module '$env/dynamic/private' {
 		npm_package_json: string;
 		LC_TIME: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
-		QT_AUTO_SCREEN_SCALE_FACTOR: string;
 		JOURNAL_STREAM: string;
 		XDG_DATA_DIRS: string;
 		KDE_FULL_SESSION: string;
@@ -245,11 +249,13 @@ declare module '$env/dynamic/private' {
 		BROWSER: string;
 		PATH: string;
 		npm_config_node_gyp: string;
+		ALACRITTY_LOG: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		npm_config_global_prefix: string;
 		KDE_APPLICATIONS_AS_SCOPE: string;
 		MAIL: string;
+		ALACRITTY_WINDOW_ID: string;
 		npm_node_execpath: string;
 		npm_config_engine_strict: string;
 		LC_NUMERIC: string;
