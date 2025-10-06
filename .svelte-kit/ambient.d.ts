@@ -29,7 +29,6 @@ declare module '$env/static/private' {
 	export const SHELL: string;
 	export const npm_command: string;
 	export const SESSION_MANAGER: string;
-	export const WINDOWID: string;
 	export const npm_config_userconfig: string;
 	export const QT_SCREEN_SCALE_FACTORS: string;
 	export const COLORTERM: string;
@@ -77,7 +76,6 @@ declare module '$env/static/private' {
 	export const INIT_CWD: string;
 	export const CHROME_DESKTOP: string;
 	export const KDE_SESSION_UID: string;
-	export const ALACRITTY_SOCKET: string;
 	export const npm_lifecycle_script: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const npm_config_npm_version: string;
@@ -99,6 +97,7 @@ declare module '$env/static/private' {
 	export const LC_MEASUREMENT: string;
 	export const XDG_VTNR: string;
 	export const XDG_SESSION_ID: string;
+	export const MANAGERPIDFDID: string;
 	export const npm_config_user_agent: string;
 	export const ROCM_PATH: string;
 	export const npm_execpath: string;
@@ -116,13 +115,11 @@ declare module '$env/static/private' {
 	export const BROWSER: string;
 	export const PATH: string;
 	export const npm_config_node_gyp: string;
-	export const ALACRITTY_LOG: string;
 	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const npm_config_global_prefix: string;
 	export const KDE_APPLICATIONS_AS_SCOPE: string;
 	export const MAIL: string;
-	export const ALACRITTY_WINDOW_ID: string;
 	export const npm_node_execpath: string;
 	export const npm_config_engine_strict: string;
 	export const LC_NUMERIC: string;
@@ -162,7 +159,6 @@ declare module '$env/dynamic/private' {
 		SHELL: string;
 		npm_command: string;
 		SESSION_MANAGER: string;
-		WINDOWID: string;
 		npm_config_userconfig: string;
 		QT_SCREEN_SCALE_FACTORS: string;
 		COLORTERM: string;
@@ -210,7 +206,6 @@ declare module '$env/dynamic/private' {
 		INIT_CWD: string;
 		CHROME_DESKTOP: string;
 		KDE_SESSION_UID: string;
-		ALACRITTY_SOCKET: string;
 		npm_lifecycle_script: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		npm_config_npm_version: string;
@@ -232,6 +227,7 @@ declare module '$env/dynamic/private' {
 		LC_MEASUREMENT: string;
 		XDG_VTNR: string;
 		XDG_SESSION_ID: string;
+		MANAGERPIDFDID: string;
 		npm_config_user_agent: string;
 		ROCM_PATH: string;
 		npm_execpath: string;
@@ -249,13 +245,11 @@ declare module '$env/dynamic/private' {
 		BROWSER: string;
 		PATH: string;
 		npm_config_node_gyp: string;
-		ALACRITTY_LOG: string;
 		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		npm_config_global_prefix: string;
 		KDE_APPLICATIONS_AS_SCOPE: string;
 		MAIL: string;
-		ALACRITTY_WINDOW_ID: string;
 		npm_node_execpath: string;
 		npm_config_engine_strict: string;
 		LC_NUMERIC: string;

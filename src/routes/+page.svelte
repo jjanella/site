@@ -104,7 +104,7 @@
 			style="width: max-content;"
 			alt="Zoomed out chunk generation"
 		/>
-		<p align="center">Prototype terrain sample</p>
+		<p class="center">Prototype terrain sample</p>
 	</div>
 	<p class="indent">
 		I am currently developing an underground-submarine openworld multiplayer
@@ -158,7 +158,7 @@
 		reworking the tech tree.
 	</p>
 
-	<div align="center">
+	<div class="center">
 		<img
 			src="/src/lib/game/flying.webp"
 			style="width: 100%; max-width: 600px"
@@ -242,13 +242,13 @@
 			style="width: 10vw;"
 			alt="Testing Input Response"
 		/>
-		<p align="center">Testing Input Response</p>
+		<p class="center">Testing Input Response</p>
 		<img
 			src="/src/lib/drone/top.jpg"
 			style="width: 10vw;"
 			alt="Internal View"
 		/>
-		<p align="center">Internal View</p>
+		<p class="center">Internal View</p>
 	</div>
 	<h1>Building a UAV</h1>
 	<p>
@@ -311,7 +311,63 @@
 	</p>
 </div>
 
-<div class="align-right card">
+<div id="Phobos" class="align-right card">
+	<h1>Phobos</h1>
+	<p>
+		One of the coolest things I've developed is a game, fully written in
+		assembly.<br /><br />
+		I say this because it is the perfect intersection of many things I enjoy;
+		low level programming, physics, space, simulation development, and game design.
+		Also small enough of a project that I could complete it in under a couple
+		of months, so another win. I even named the game based on the emulator, as
+		Phobos is a moon of Mars <br /><br />The instructions for this
+		assignment were very broad, to develop a platformer game in assembly.
+		This left a lot of room for creative freedom, especially due to the
+		loose definition of platformer. With infinite time I would have
+		developed a whole rocket simulator, and used the justification that the
+		launchpad was a platform.
+		<br />
+		<br /> On the technical side this was a very difficult project. There are
+		only about 16 variables actually usable in MIPS, and a lot of them are reserved
+		to specific logical controls under best practice. Then following the many
+		loops and recursive, real-time functionality required extensive and efficient
+		use of the stack. Ideally accessing a few bytes shouldn't strike the fear
+		of low framerates to mind, but the Mars-MIPS emulator I was using was far
+		from efficient.
+	</p>
+	<h3>Notable Features</h3>
+	<ul>
+		<li>Raycast collision detection and repositioning</li>
+		<li>Sub-pixel velocity and positioning</li>
+		<li>Awesome pixel graphics (the rocket shoots fire!)</li>
+		<li>High framerates (for a low-performance emulator)</li>
+		<li>Enemies shooting at you!</li>
+		<li>Loot pickups</li>
+	</ul>
+	<p>
+		Probably the most annoying part of this was that the emulator couldn't
+		handle simutaineous key inputs. Fortunately I have over a thousand hours
+		experience landing rockets on the <a
+			href="https://kerbalspaceprogram.fandom.com/wiki/Mun">Mün</a
+		>
+		so I was comfortable giving a few unique key inputs per second. I never imagined
+		this is something I would be proud, and I still don't think I am. However,
+		it works.<br /><br />At this point you may have realized I am a bit of a
+		space nerd. Enjoy this recording I made at 1am demonstrating the
+		features of my game to a TA, compressed to the point that the audio has
+		texture.
+	</p>
+	<video width="90%" controls>
+		<track kind="captions" />
+		<source src="src/lib/phobos/demo.mp4" type="video/mp4" />
+		Your browser does not support the video.
+	</video><br />
+	The
+	<a href="https://github.com/jjanella/Phobos">source code</a> is also available
+	for your enjoyment.
+</div>
+
+<div class="align-left card">
 	<h1>Work Experience</h1>
 	<ul>
 		<li>
@@ -361,7 +417,7 @@
 	</ul>
 </div>
 
-<div class="align-left card">
+<div class="align-right card">
 	<h1>Volunteering</h1>
 	<p>
 		I volunteer within the Computer Science, Mathematics, and Statistics
